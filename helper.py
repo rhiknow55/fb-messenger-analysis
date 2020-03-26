@@ -19,9 +19,13 @@ def days_since_start(timestamp):
     return days
 
 # Return the date time
-def year_and_month(days):
+def formatday(days):
     dt = starting_date + timedelta(days)
 
     date_format='%m/%d/%Y'
-    
+
     return dt.strftime(date_format)
+
+# Return the datetime "days" from the starting date
+def formatdatetime(days):
+    return starting_date + timedelta(days)
